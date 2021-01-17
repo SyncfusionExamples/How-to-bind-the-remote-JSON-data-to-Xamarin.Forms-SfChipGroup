@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.XForms.iOS.Buttons;
 using UIKit;
 
 namespace SimpleSample.iOS
@@ -24,7 +25,7 @@ namespace SimpleSample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            SfChipGroupRenderer.Init();
             return base.FinishedLaunching(app, options);
         }
     }
