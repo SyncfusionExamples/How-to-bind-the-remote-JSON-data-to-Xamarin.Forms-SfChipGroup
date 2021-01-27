@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Syncfusion.XForms.Buttons;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,8 +6,6 @@ using System.ComponentModel;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace SimpleSample
 {
@@ -30,7 +27,7 @@ namespace SimpleSample
             }
         }
 
-      
+
 
         public ViewModel()
         {
@@ -39,7 +36,7 @@ namespace SimpleSample
 
         }
 
-       async void GetData()
+        async void GetData()
         {
             string content = await _client.GetStringAsync(Url); //Sends a GET request to the specified Uri and returns the response body as a string in an asynchronous operation
             var json_Datas = JsonConvert.DeserializeObject<ObservableCollection<Model>>(content); //Deserializes or converts JSON String into a collection of Post
